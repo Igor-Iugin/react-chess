@@ -1,0 +1,53 @@
+.item {
+	position: relative;
+	border-radius: 0;
+	border: none;
+}
+
+.black {
+	background-color: #333;
+}
+
+.white {
+	background-color: white;
+}
+
+
+.active::after,
+.active::before {
+	content: '';
+	position: absolute;
+	display: block;
+	border-radius: 50%;
+}
+
+.active::before {
+	top: 1px;
+	left: 1px;
+	right: 1px;
+	bottom: 1px;
+	border-width: 4px;
+	border-style: solid;
+	border-color: green;
+}
+
+.active:empty::after {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 15px;
+	height: 15px;
+	background-color: green;
+}
+
+.active:empty::before {
+	content: none;
+}
+
+.active.enemy::before {
+	border-color: firebrick;
+}
+
+.active.enemy::after {
+	background-color: firebrick;
+}

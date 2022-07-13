@@ -1,6 +1,38 @@
 .wrapper {
 	display: grid;
+	grid-template-areas:
+		'... turn  ... '
+		'... board lost';
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
 	place-items: center;
 	width: 100vw;
 	height: 100vh;
+	color: #dbe1e3;
+}
+
+.wrapper h2 {
+	display: flex;
+	gap: .2em;
+}
+
+.wrapper h2 span {
+	text-transform: uppercase;
+}
+
+.turn {
+	grid-area: turn;
+}
+
+.board {
+	grid-area: board;
+	align-self: start;
+}
+
+.lost {
+	grid-area: lost;
+	align-self: start;
+	justify-self: start;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 }

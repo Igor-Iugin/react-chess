@@ -1,0 +1,21 @@
+.wrapper {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	gap: 15px;
+}
+
+.wrapper ul {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	align-items: start;
+	gap: 10px;
+	height: min-content;
+}
+
+.wrapper ul li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	width: max-content;
+}
