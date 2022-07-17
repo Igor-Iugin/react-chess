@@ -21,23 +21,6 @@ export class King extends FigureModel {
 	}
 
 	canMove(target: CellModel): boolean {
-		const isOffsetX = target.x === this.cell.x + 1 || target.x === this.cell.x - 1
-		const isOffsetY = target.y === this.cell.y + 1 || target.y === this.cell.y - 1
-		const isEmpty = this.cell.board.getCell(target.x, target.y).isEmpty()
-		const isEnemy = this.cell.isEnemy(target)
-
-		switch (true) {
-			case !super.canMove(target):
-				return false
-			/* Offset X & Y */
-			case ((isOffsetX && target.y === this.cell.y) || (isOffsetY && target.x === this.cell.x))
-			&& (isEmpty || isEnemy):
-				return true
-			/* Diagonal offset */
-			case isOffsetX && isOffsetY && (isEmpty || isEnemy):
-				return true
-			default:
-				return false
-		}
+		return super.canMove(target);
 	}
 }
