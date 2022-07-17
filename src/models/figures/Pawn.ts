@@ -21,9 +21,9 @@ export class Pawn extends FigureModel {
 	}
 
 	canMove(target: CellModel): boolean {
-		const isWhite = this.cell.figure?.color === ColorsModel.WHITE
-		const direction = isWhite ? 1 : -1
-		const firstStepDirection = isWhite ? 2 : -2
+		const isBlack = this.cell.figure?.color === ColorsModel.BLACK
+		const direction = isBlack ? 1 : -1
+		const firstStepDirection = isBlack ? 2 : -2
 
 		const isOffsetXOnly = target.x === this.cell.x
 		const isOffsetByOneStep = target.y === this.cell.y + direction
