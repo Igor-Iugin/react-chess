@@ -36,40 +36,40 @@ export class BoardModel {
 
 	private addPawns() {
 		for (let i = 0; i < 8; i++) {
-			new Pawn(ColorsModel.WHITE, this.getCell(i, 1))
-			new Pawn(ColorsModel.BLACK, this.getCell(i, 6))
+			new Pawn(ColorsModel.WHITE, this.getCell(i, 6))
+			new Pawn(ColorsModel.BLACK, this.getCell(i, 1))
 		}
 	}
 
 	private addKings() {
-		new King(ColorsModel.WHITE, this.getCell(3, 0))
-		new King(ColorsModel.BLACK, this.getCell(4, 7))
+		new King(ColorsModel.WHITE, this.getCell(4, 7))
+		new King(ColorsModel.BLACK, this.getCell(3, 0))
 	}
 
 	private addBishops() {
-		new Bishop(ColorsModel.WHITE, this.getCell(5, 0))
-		new Bishop(ColorsModel.WHITE, this.getCell(2, 0))
-		new Bishop(ColorsModel.BLACK, this.getCell(2, 7))
-		new Bishop(ColorsModel.BLACK, this.getCell(5, 7))
+		new Bishop(ColorsModel.WHITE, this.getCell(2, 7))
+		new Bishop(ColorsModel.WHITE, this.getCell(5, 7))
+		new Bishop(ColorsModel.BLACK, this.getCell(5, 0))
+		new Bishop(ColorsModel.BLACK, this.getCell(2, 0))
 	}
 
 	private addRooks() {
-		new Rook(ColorsModel.WHITE, this.getCell(0, 0))
-		new Rook(ColorsModel.WHITE, this.getCell(7, 0))
-		new Rook(ColorsModel.BLACK, this.getCell(0, 7))
-		new Rook(ColorsModel.BLACK, this.getCell(7, 7))
+		new Rook(ColorsModel.WHITE, this.getCell(0, 7))
+		new Rook(ColorsModel.WHITE, this.getCell(7, 7))
+		new Rook(ColorsModel.BLACK, this.getCell(0, 0))
+		new Rook(ColorsModel.BLACK, this.getCell(7, 0))
 	}
 
 	private addQueens() {
-		new Queen(ColorsModel.WHITE, this.getCell(4, 0))
-		new Queen(ColorsModel.BLACK, this.getCell(3, 7))
+		new Queen(ColorsModel.WHITE, this.getCell(3, 7))
+		new Queen(ColorsModel.BLACK, this.getCell(4, 0))
 	}
 
 	private addKnights() {
-		new Knight(ColorsModel.WHITE, this.getCell(1, 0))
-		new Knight(ColorsModel.WHITE, this.getCell(6, 0))
-		new Knight(ColorsModel.BLACK, this.getCell(1, 7))
-		new Knight(ColorsModel.BLACK, this.getCell(6, 7))
+		new Knight(ColorsModel.WHITE, this.getCell(1, 7))
+		new Knight(ColorsModel.WHITE, this.getCell(6, 7))
+		new Knight(ColorsModel.BLACK, this.getCell(1, 0))
+		new Knight(ColorsModel.BLACK, this.getCell(6, 0))
 	}
 
 	public addFigures() {
